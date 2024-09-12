@@ -1,5 +1,5 @@
 # FCCUnlock
-**Special thanks allo sviluppatore di Lenovo della libreria condivisa che non ha offuscato il codice e ha lasciato qualche indizio sui link alle altre librerie nei commenti per facilitare la decompilazione***
+**Special thanks allo sviluppatore di Lenovo della libreria condivisa che non ha offuscato il codice e ha lasciato qualche indizio sui link alle altre librerie nei commenti per facilitare la decompilazione**
 
 È stato utilizzato un portatile **Lenovo T14S Gen 2 Intel** con un modulo **WWAN Quectel EM120R-GL** (presente anche in altri modelli come l'X1 Carbon e molti altri, e compatibile con la scheda Quectel 160).  
 Il modulo non ha mai funzionato correttamente su Linux, pertanto è stato deciso di investigare una soluzione, evitando l'uso del pacchetto **SNAP** fornito da Lenovo (**lenovo-wwan-dpr**), per preferenze legate all'ambiente di sistema.
@@ -86,4 +86,4 @@ Questo comando visualizza le informazioni dettagliate del modem con ID a. Viene 
 spiegazione del comando:
 Il comando mmcli viene utilizzato per abilitare il modem. L'opzione -v attiva la modalità verbose, fornendo un output dettagliato. Il comando interno mmcli -L | head -n1 | awk '{print$1}' recupera l'ID del primo modem dall'elenco e lo passa come argomento all'opzione --modem. L'opzione -e abilita il modem selezionato.
 
-Resta solo da fare in modo che al caricamento del network manager venga abilitato il modem questo dipende molto dalla distribuzione e sopratutto dal DE che utilizzate.
+**Resta solo da fare in modo che al caricamento del network manager venga abilitato il modem questo dipende molto dalla distribuzione e sopratutto dal DE che utilizzate.**
