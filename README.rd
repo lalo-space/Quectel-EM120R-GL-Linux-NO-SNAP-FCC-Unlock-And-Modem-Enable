@@ -6,17 +6,14 @@ Il modulo non ha mai funzionato correttamente su Linux, pertanto è stato deciso
 Lenovo spedisce alcuni dispositivi con un **FCC Lock** (Federal Communication Commission), che normalmente viene applicato solo ai dispositivi venduti sul suolo americano. Tuttavia, si è riscontrato che anche questo dispositivo, acquistato su Amazon Italia, presenta lo stesso blocco.
 
 ## Ambiente di test:
-
 Linux nes 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 (2024-08-26) x86_64 GNU/Linux
 
 ## Problema:
-
 [ 19.225293] thinkpad_acpi: rfkill switch tpacpi_wwan_sw: radio is blocked
 
 Il **Network Manager** di XFCE4 rileva il dispositivo "WWAN", ma lo segnala come **Non Disponibile**. Tuttavia, nel tool di configurazione avanzata è possibile configurare i profili poiché l'interfaccia viene comunque rilevata.
 
 ## Soluzione proposta:
-
 Il pacchetto ufficiale di Lenovo **lenovo-wwan-dpr** è stato recuperato dallo **Snap Store**:
 
 [https://search.apps.ubuntu.com/api/v1/package/lenovo-wwan-dpr](https://search.apps.ubuntu.com/api/v1/package/lenovo-wwan-dpr)
@@ -41,7 +38,6 @@ Copiare il file mbim2sar.so nella cartella creata.
 Accedere al repository del codice sorgente FCCUnlock.c e copiarlo nella stessa cartella.
 
 Avviare la compilazione del programma, facendo attenzione alle dipendenze:
-
 
 gcc -o FCCUnlock FCCUnlock.c -ldl -Wall
 
@@ -84,3 +80,5 @@ root@nes:/home/claudio/app/FCCUnlock# mmcli -v --modem=`mmcli -L |head -n1 | awk
 
 spiegazione del comando:
 Il comando mmcli viene utilizzato per abilitare il modem. L'opzione -v attiva la modalità verbose, fornendo un output dettagliato. Il comando interno mmcli -L | head -n1 | awk '{print$1}' recupera l'ID del primo modem dall'elenco e lo passa come argomento all'opzione --modem. L'opzione -e abilita il modem selezionato.
+
+Resta solo da fare in modo che al caricamento del network manager venga abilitato il modem questo dipende molto dalla distribuzione e sopratutto dal DE che utilizzate.
