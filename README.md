@@ -1,4 +1,5 @@
 # FCCUnlock
+**Special thanks allo sviluppatore di Lenovo della libreria condivisa che non ha offuscato il codice e ha lasciato qualche indizio sui link alle altre librerie nei commenti per facilitare la***
 
 È stato utilizzato un portatile **Lenovo T14S Gen 2 Intel** con un modulo **WWAN Quectel EM120R-GL** (presente anche in altri modelli come l'X1 Carbon e molti altri, e compatibile con la scheda Quectel 160).  
 Il modulo non ha mai funzionato correttamente su Linux, pertanto è stato deciso di investigare una soluzione, evitando l'uso del pacchetto **SNAP** fornito da Lenovo (**lenovo-wwan-dpr**), per preferenze legate all'ambiente di sistema.
