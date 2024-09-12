@@ -8,6 +8,9 @@ Lenovo spedisce alcuni dispositivi con un **FCC Lock** (Federal Communication Co
 ## Ambiente di test:
 Linux nes 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 (2024-08-26) x86_64 GNU/Linux
 
+![immagine](https://github.com/user-attachments/assets/9c2d3b05-5d56-4881-9c55-72406e041ba6)
+
+
 ## Problema:
 [ 19.225293] thinkpad_acpi: rfkill switch tpacpi_wwan_sw: radio is blocked
 
